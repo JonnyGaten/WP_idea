@@ -11,13 +11,9 @@ switch_theme('rois');
 WP_CLI::log('Activated theme: rois');
 
 if (function_exists('acf_import_field_group')) {
-    $theme_dir = get_theme_root() . '/rois';
-    foreach (glob($theme_dir . '/acf-json/*.json') as $file) {
-        $json = json_decode(file_get_contents($file), true);
-        if ($json) {
-            acf_import_field_group($json);
-        }
-    }
+    // rois is now the active theme, so this picks up rois/acf-json and
+    // handles dedup + local-json cleanup the same way `bin/setup.sh` does.
+    require __DIR__ . '/sync-acf.php';
     WP_CLI::log('Synced rois ACF field groups.');
 } else {
     WP_CLI::warning('ACF is not active — field groups not synced, page-builder content below will not save correctly.');

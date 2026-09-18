@@ -34,12 +34,34 @@ if [ ! -f public/wp-config.php ]; then
         --extra-php <<PHP
 define('WP_CONTENT_DIR_NAME', 'content');
 define('WP_CONTENT_DIR', ABSPATH . WP_CONTENT_DIR_NAME);
-define('WP_CONTENT_URL', 'http://' . \$_SERVER['HTTP_HOST'] . '/' . WP_CONTENT_DIR_NAME);
+define('WP_CONTENT_URL', 'http://' . (\$_SERVER['HTTP_HOST'] ?? parse_url(getenv('PROJECT_URL') ?: 'http://localhost', PHP_URL_HOST)) . '/' . WP_CONTENT_DIR_NAME);
 define('ENV', 'local');
 define('RECAPT_SITE', getenv('RECAPTCHA_SITE_KEY') ?: '');
 define('RECAPT_SECRET', getenv('RECAPTCHA_SECRET_KEY') ?: '');
 define('GTM_TAG', getenv('GTM_TAG') ?: false);
 PHP
+elif ! grep -q "WP_CONTENT_DIR_NAME" public/wp-config.php; then
+    # ddev auto-generates a bare wp-config.php on first `ddev start` before this
+    # script gets a chance to write its own — patch the custom defines into the
+    # marker section ddev's stub already leaves for exactly this purpose.
+    echo "==> Patching wp-config.php with custom content-dir defines"
+    php -r '
+        $path = "public/wp-config.php";
+        $contents = file_get_contents($path);
+        $marker = "/* Add any custom values between this line and the \"stop editing\" line. */";
+        $custom = <<<PHP
+
+define("WP_CONTENT_DIR_NAME", "content");
+define("WP_CONTENT_DIR", ABSPATH . WP_CONTENT_DIR_NAME);
+define("WP_CONTENT_URL", "http://" . (\$_SERVER["HTTP_HOST"] ?? parse_url(getenv("PROJECT_URL") ?: "http://localhost", PHP_URL_HOST)) . "/" . WP_CONTENT_DIR_NAME);
+define("ENV", "local");
+define("RECAPT_SITE", getenv("RECAPTCHA_SITE_KEY") ?: "");
+define("RECAPT_SECRET", getenv("RECAPTCHA_SECRET_KEY") ?: "");
+define("GTM_TAG", getenv("GTM_TAG") ?: false);
+PHP;
+        $contents = str_replace($marker, $marker . $custom, $contents);
+        file_put_contents($path, $contents);
+    '
 fi
 
 if ! ddev wp core is-installed >/dev/null 2>&1; then
@@ -62,11 +84,15 @@ if ! ddev wp plugin is-installed advanced-custom-fields-pro >/dev/null 2>&1; the
         ddev wp plugin install "$ACF_ZIP" --activate || echo "!! ACF PRO install failed, check ACF_PRO_KEY in .env"
         ddev wp eval 'if (function_exists("acf_pro_update_license")) { acf_pro_update_license(getenv("ACF_PRO_KEY")); echo "ACF PRO license set.\n"; } else { echo "ACF PRO installed, but license activation needs a manual step under Custom Fields > Updates.\n"; }'
         rm -f "$ACF_ZIP"
+    elif ddev wp plugin is-installed advanced-custom-fields >/dev/null 2>&1; then
+        : # free ACF already installed from a prior run without a key
     else
-        echo "!! ACF_PRO_KEY not set in .env — skipping ACF PRO install."
-        echo "   The theme will keep working off acf-json/ field definitions, but the"
-        echo "   admin UI for editing fields needs the plugin. Get a key from"
-        echo "   https://www.advancedcustomfields.com/my-account/ and re-run this script."
+        echo "!! ACF_PRO_KEY not set in .env — installing free ACF from wordpress.org instead."
+        echo "   The theme needs some build of ACF active just to boot (get_field() etc)."
+        echo "   Flexible-content page-builder fields are a PRO-only feature, so seeded"
+        echo "   page-builder content won't render until a real key is added and this"
+        echo "   script is re-run. Get a key from https://www.advancedcustomfields.com/my-account/"
+        ddev wp plugin install advanced-custom-fields --activate
     fi
 fi
 

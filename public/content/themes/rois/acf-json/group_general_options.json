@@ -1,9 +1,9 @@
 {
-    "key": "group_bdcb59ce005e",
+    "key": "group_e7b249057e55",
     "title": "General options",
     "fields": [
         {
-            "key": "field_b7ec0fa4bf34",
+            "key": "field_df9e550adb0b",
             "label": "Social media",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_95ef67f82954",
+            "key": "field_95d35cbd3222",
             "label": "Platforms",
             "name": "social_platforms",
             "type": "repeater",
@@ -31,14 +31,14 @@
                 "class": "",
                 "id": ""
             },
-            "collapsed": "field_c416d1935050",
+            "collapsed": "field_0dc7a74f402c",
             "min": 0,
             "max": 0,
             "layout": "block",
             "button_label": "Add social media profile",
             "sub_fields": [
                 {
-                    "key": "field_c416d1935050",
+                    "key": "field_0dc7a74f402c",
                     "label": "Platform",
                     "name": "platform",
                     "type": "select",
@@ -66,7 +66,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_b44b1f7d025f",
+                    "key": "field_d8f417d3d09b",
                     "label": "Link",
                     "name": "link",
                     "type": "url",
@@ -84,7 +84,7 @@
             ]
         },
         {
-            "key": "field_ec8f64a213a1",
+            "key": "field_af39b1dde355",
             "label": "Phone",
             "name": "",
             "type": "tab",
@@ -100,7 +100,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_19a1e36eea5c",
+            "key": "field_6e0c37e8123e",
             "label": "Telephone",
             "name": "global--telephone",
             "type": "text",
@@ -138,7 +138,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_fa1292751054",
+            "key": "field_c8a179b6574c",
             "label": "Logos",
             "name": "",
             "type": "tab",
@@ -154,7 +154,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_0f14b4bd84b4",
+            "key": "field_273f6db36597",
             "label": "Header logo",
             "name": "header_logo",
             "type": "image",
@@ -179,7 +179,7 @@
             "uploader": "wp"
         },
         {
-            "key": "field_0aa49722c394",
+            "key": "field_d9a1f7af6383",
             "label": "Footer logo",
             "name": "footer_logo",
             "type": "image",
@@ -204,7 +204,7 @@
             "uploader": "wp"
         },
         {
-            "key": "field_8a094d74dc3d",
+            "key": "field_6d01d26bd80d",
             "label": "Archive pages",
             "name": "",
             "type": "tab",
@@ -220,7 +220,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_6660dbab07a2",
+            "key": "field_a9a5dbddc491",
             "label": "Archive page",
             "name": "archive_page",
             "type": "repeater",
@@ -239,7 +239,7 @@
             "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_b1bc681f1b02",
+                    "key": "field_092cd3a35ba3",
                     "label": "Select post type",
                     "name": "select_post_type",
                     "type": "select",
@@ -265,7 +265,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_adfaa47c734e",
+                    "key": "field_d246e2cda283",
                     "label": "Select archive page",
                     "name": "select_archive_page",
                     "type": "post_object",
@@ -289,7 +289,7 @@
             ]
         },
         {
-            "key": "field_8d7363e29800",
+            "key": "field_bd1ba32b506c",
             "label": "Map",
             "name": "",
             "type": "tab",
@@ -305,7 +305,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_56582a9df275",
+            "key": "field_90bf8df802fe",
             "label": "Location",
             "name": "location",
             "type": "google_map",

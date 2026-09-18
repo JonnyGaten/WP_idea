@@ -1,9 +1,9 @@
 {
-    "key": "group_cdbed3aa5be8",
+    "key": "group_f49d56c6b8ee",
     "title": "Theme options",
     "fields": [
         {
-            "key": "field_f60ad1db8c82",
+            "key": "field_0a0e1c26c0d0",
             "label": "Map",
             "name": "",
             "type": "tab",
@@ -19,7 +19,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_9236854a8c9b",
+            "key": "field_6ef59c2d9f64",
             "label": "Map",
             "name": "theme--map",
             "type": "checkbox",
@@ -42,7 +42,7 @@
             "save_custom": 0
         },
         {
-            "key": "field_8e52ed57bd49",
+            "key": "field_01d2d49612a5",
             "label": "Map API key",
             "name": "theme--map-api-key",
             "type": "text",
@@ -51,7 +51,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_9236854a8c9b",
+                        "field": "field_6ef59c2d9f64",
                         "operator": "==",
                         "value": "true"
                     }
@@ -69,7 +69,7 @@
             "maxlength": ""
         },
         {
-            "key": "field_0339d9d5eb05",
+            "key": "field_4255d9dd0212",
             "label": "Contact forms",
             "name": "",
             "type": "tab",
@@ -85,7 +85,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_bec970a730d6",
+            "key": "field_b511a0578c50",
             "label": "Contact form",
             "name": "theme--contact-form",
             "type": "checkbox",
@@ -108,7 +108,7 @@
             "save_custom": 0
         },
         {
-            "key": "field_a6dcc9bf8657",
+            "key": "field_4d8c9282ddd0",
             "label": "Info",
             "name": "",
             "type": "message",
@@ -117,7 +117,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_bec970a730d6",
+                        "field": "field_b511a0578c50",
                         "operator": "==",
                         "value": "true"
                     }
@@ -133,7 +133,7 @@
             "esc_html": 0
         },
         {
-            "key": "field_dd00a02bec12",
+            "key": "field_379a0da6e25d",
             "label": "Mailjet keys",
             "name": "mailjet_keys",
             "type": "group",
@@ -142,7 +142,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_bec970a730d6",
+                        "field": "field_b511a0578c50",
                         "operator": "==",
                         "value": "true"
                     }
@@ -156,7 +156,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_dbe7803d4778",
+                    "key": "field_aa030f8df3aa",
                     "label": "Public key",
                     "name": "public_key",
                     "type": "password",
@@ -173,7 +173,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_7b01385d31ac",
+                    "key": "field_c56d959e0d17",
                     "label": "Private key",
                     "name": "private_key",
                     "type": "password",
@@ -192,7 +192,7 @@
             ]
         },
         {
-            "key": "field_06c3d93978d2",
+            "key": "field_1ebff53b8711",
             "label": "Recaptcha keys",
             "name": "recaptcha_keys",
             "type": "group",
@@ -201,7 +201,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_bec970a730d6",
+                        "field": "field_b511a0578c50",
                         "operator": "==",
                         "value": "true"
                     }
@@ -215,7 +215,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_04987d3c26d6",
+                    "key": "field_15c8d953b29e",
                     "label": "Site key",
                     "name": "site_key",
                     "type": "password",
@@ -232,7 +232,7 @@
                     "append": ""
                 },
                 {
-                    "key": "field_e3f5eb568d3a",
+                    "key": "field_dc4cffa9669f",
                     "label": "Secret key",
                     "name": "secret_key",
                     "type": "password",
@@ -251,7 +251,7 @@
             ]
         },
         {
-            "key": "field_2d50ef946947",
+            "key": "field_e18895b1df12",
             "label": "Other site options",
             "name": "",
             "type": "tab",
@@ -267,7 +267,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_8f4a3514feb1",
+            "key": "field_43c1b51bbc7e",
             "label": "Site search",
             "name": "theme--site-search",
             "type": "checkbox",
@@ -290,7 +290,7 @@
             "save_custom": 0
         },
         {
-            "key": "field_efe16c075d9a",
+            "key": "field_7d15147944dd",
             "label": "Functionality",
             "name": "",
             "type": "tab",
@@ -306,7 +306,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_2b10bb58ee0c",
+            "key": "field_4f79c76fbdb2",
             "label": "Slick",
             "name": "slick",
             "type": "group",
@@ -321,7 +321,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_3743f7e257f3",
+                    "key": "field_370838f5a815",
                     "label": "Enable",
                     "name": "library",
                     "type": "true_false",
@@ -340,7 +340,7 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_fa4cc3785e41",
+                    "key": "field_086d53094478",
                     "label": "Loading",
                     "name": "loading",
                     "type": "radio",
@@ -349,7 +349,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_3743f7e257f3",
+                                "field": "field_370838f5a815",
                                 "operator": "==",
                                 "value": "1"
                             }
@@ -374,7 +374,7 @@
             ]
         },
         {
-            "key": "field_8451c9274031",
+            "key": "field_28464619027c",
             "label": "Isotope",
             "name": "isotope",
             "type": "group",
@@ -389,7 +389,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_f0b57e3209e0",
+                    "key": "field_1d499e55ce9e",
                     "label": "Enable",
                     "name": "library",
                     "type": "true_false",
@@ -408,7 +408,7 @@
                     "ui_off_text": ""
                 },
                 {
-                    "key": "field_38c9441007f2",
+                    "key": "field_cc7cded0d078",
                     "label": "Loading",
                     "name": "loading",
                     "type": "radio",
@@ -417,7 +417,7 @@
                     "conditional_logic": [
                         [
                             {
-                                "field": "field_f0b57e3209e0",
+                                "field": "field_1d499e55ce9e",
                                 "operator": "==",
                                 "value": "1"
                             }
@@ -442,7 +442,7 @@
             ]
         },
         {
-            "key": "field_65c6baebac2d",
+            "key": "field_982690c6bd84",
             "label": "Ajax filter",
             "name": "ajax_filter",
             "type": "group",
@@ -457,7 +457,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_02d95635490b",
+                    "key": "field_bddef824c0d0",
                     "label": "Enable",
                     "name": "library",
                     "type": "true_false",

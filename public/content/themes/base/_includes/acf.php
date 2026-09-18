@@ -3,7 +3,15 @@
 
 //*  OPTIONS PAGE FROM ACF
 
-if (function_exists('acf_add_options_page')) {
+// Registered on acf/init (not at file-parse time) — ACF's own labels are
+// translated with __(), and calling this before WP's `init` action trips the
+// "_load_textdomain_just_in_time" notice added in WP 6.7.
+add_action('acf/init', 'rb_acf__register_options_pages');
+function rb_acf__register_options_pages()
+{
+	if (!function_exists('acf_add_options_page')) {
+		return;
+	}
 
 	acf_add_options_page(array(
 		'page_title' 	=> 'Options',
