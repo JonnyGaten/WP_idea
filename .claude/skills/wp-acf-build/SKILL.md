@@ -32,6 +32,33 @@ Otherwise, starting fresh: copy `public/content/themes/base/` to
 and work in the copy. Never edit `base/` itself for a real build — it's the
 scaffold other projects fork from.
 
+## Step 0.5 — first time in this repo? get a local site running before anything else
+
+If `.env` doesn't exist yet, this is a first run — don't ask the person to go
+edit a file by hand, and don't run `bin/setup.sh` and let it hard-fail on a
+missing `.env`. Instead, ask them directly in conversation for the handful of
+values that actually matter, then write the file yourself:
+
+- **Admin password** — offer to generate one if they don't care ("any
+  password is fine, or I can just make one up").
+- **Admin email** — ask for it.
+- **ACF PRO license key** — explicitly say this is optional and fine to skip
+  ("leave blank for now" is a valid answer — the site still comes up, you
+  just won't get the ACF Pro plugin/admin UI until a key's added later).
+
+Copy `.env.example` to `.env`, fill in what they gave you, then run
+`bin/setup.sh` yourself (see Step 6). Don't hand them a checklist of manual
+commands to run — you have shell access in this session, so drive the whole
+"empty folder → running WordPress site in a browser" sequence yourself and
+report back what you ended up with (URL, admin login, what got installed and
+what got skipped).
+
+If `bin/setup.sh` errors partway through (likely, on an early run against a
+fresh DDEV/WP-CLI version) — don't stop and report the raw error. Read it,
+fix the script or the command it's failing on, and retry, the same way
+you'd debug any other failing script in this repo. Keep going until there's
+an actual site running, not just until you've explained what went wrong.
+
 ## Step 1 — get the design, decompose it into modules
 
 Whatever the input (Figma link/export, PDF, screenshot, verbal description),
