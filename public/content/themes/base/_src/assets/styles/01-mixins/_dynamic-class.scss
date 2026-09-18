@@ -1,0 +1,27 @@
+// Dynamic class mixin
+@mixin dynamic-class($class, $prefix, $size, $append, $extension: 'px') {
+    .#{$class}-#{$append} {
+        #{$prefix}: #{1 * $size}#{$extension};
+    }
+}
+
+// Some example usages
+
+// ⭐ 1. Create min & max height classes
+@for $i from 0 through 120 {
+    @include dynamic-class(min-height, min-height, $i*5, $i*5);
+}
+// .min-height-5, .min-height-10 ... .min-height-600
+
+
+// ⭐ 2. Create z-index classes 1 through 10
+// CREATE Z INDEX RULES 1 THROUGH 10
+@for $i from 0 through 10 {
+    
+    // usage .z-1, .z-2 ... .z-10
+    @include dynamic-class(z, z-index, $i, $i, '');
+
+    // usage .nz-1, .nz-2  .. .nz-10
+    @include dynamic-class(nz, z-index, -$i, $i, '');
+    
+}

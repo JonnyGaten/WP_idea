@@ -1,0 +1,32 @@
+// BRAND COLOURS / NAMED VARIABLES
+// Placeholder palette — replace with the project's brand colours per build.
+$primary: #2b2d42;
+$black: #0f1115;
+$grey: #6c7080;
+$lightgrey: rgba($grey, 0.3);
+$gray-100: #f2f3f4;
+$gray-200: #e5e7e9;
+
+//* MAIN COLOURS
+$white: #ffffff;
+$primary-colour: $primary;
+
+//* Buttons
+// Name, text-colour, text-colour:hover, bg colour, bg colour:hover
+$buttonColours: (
+  ("primary", $white, $white, $primary-colour, $black),
+  ("black", $white, $white, $black, $primary-colour)
+);
+
+//* Fonts
+$fontColours: (
+    primary: $primary-colour,
+    black: $black,
+);
+
+//* Background Colour
+// NOTE: bg-option e.g .bg-primary
+$bgColours: (
+    primary: $primary-colour,
+    black: $black,
+);

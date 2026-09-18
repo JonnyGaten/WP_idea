@@ -1,0 +1,36 @@
+# WordPress core + everything else DDEV/WP-CLI downloads into public/ is
+# reproduced by bin/setup.sh, not committed. Only the theme source is tracked.
+/public/*
+!/public/content
+/public/content/*
+!/public/content/themes
+/public/content/themes/*
+!/public/content/themes/base
+
+# Compiled theme assets — regenerate with `npm run build` inside _src.
+# (A real client project deploying straight to WP Engine via git DOES commit
+# _dist/, since there's no build step on the server. This base repo doesn't,
+# to keep the boilerplate diff-clean.)
+/public/content/themes/base/_dist/
+
+# Node / build tooling
+node_modules/
+npm-debug.log*
+
+# Secrets — never commit these
+.env
+.ddev/.env*
+wp-config.php
+*.local.php
+acf-pro.zip
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+
+# DDEV
+.ddev/.gitignore
+.ddev/import.sql
+.ddev/db_snapshots/

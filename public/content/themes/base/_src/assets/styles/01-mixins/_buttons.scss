@@ -1,0 +1,19 @@
+//* Loop for button colours
+// Generate Button Classes 
+// Name, text-colour, text-colour:hover
+@each $x in $buttonColours {
+  .btn-#{nth($x,1)} {
+    color: #{nth($x,2)};
+    transition: background 0.2s;
+    background:#{nth($x,4)};
+    &:hover
+    {
+      color: #{nth($x,3)};
+      transition: background 0.2s;
+      cursor: pointer;
+      background:#{nth($x,5)};
+    }
+  }
+}
+
+

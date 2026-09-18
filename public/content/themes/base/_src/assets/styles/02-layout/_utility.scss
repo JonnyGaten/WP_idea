@@ -1,0 +1,124 @@
+body {
+    overflow-x: hidden;
+
+}
+
+.overflow-hidden
+{
+    overflow: hidden;
+
+    &-x
+    {
+        overflow-x: hidden;
+    }
+
+    &-y
+    {
+        overflow-y: hidden;
+    }
+}
+
+.right-0
+{
+    right:0;
+}
+.top-0
+{
+    top:0;
+}
+.bottom-0
+{
+    bottom:0;
+}
+
+hr
+{
+    
+    // width: 100%;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+
+}
+
+.module--spacing{
+    
+    &-smallest,
+    &-small,
+    &-medium,
+    &-large,
+    &-largest
+    {
+        padding-top:3rem;
+        padding-bottom:3rem;
+    }   
+
+    &-smallest
+    {
+
+        @include media-breakpoint-up(md) {
+            padding-top:1rem;
+            padding-bottom:1rem;
+        }
+    }
+
+    &-small
+    {
+
+        @include media-breakpoint-up(md) {
+            padding-top:3rem;
+            padding-bottom:3rem;
+        }
+    }
+
+    &-medium
+    {
+
+        @include media-breakpoint-up(md) {
+            padding-top:5rem;
+            padding-bottom:5rem;
+        }
+    }
+
+    &-large
+    {
+
+        @include media-breakpoint-up(md) {
+            padding-top:8rem;
+            padding-bottom:8rem;
+        }
+    }
+
+    &-largest
+    {
+
+        @include media-breakpoint-up(md) {
+            padding-top:10rem;
+            padding-bottom:10rem;
+        }
+    }
+}
+
+.relative {
+    position: relative;
+}
+
+.bg--cover
+{
+    background-size: cover;
+}
+
+.bg--contain
+{
+    background-size: contain;
+}
+.bg--center
+{
+    background-position: center;
+}
+
+.bg--no-repeat
+{
+    background-repeat: no-repeat;
+}
+
