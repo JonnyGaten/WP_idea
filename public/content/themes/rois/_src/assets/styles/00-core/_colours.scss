@@ -1,0 +1,42 @@
+// ROIS design-concept palette — ported 1:1 from the design artifact.
+// Exposed as CSS custom properties since the component partials below
+// reference them directly (var(--green), etc.), matching how the source
+// design was authored.
+:root {
+  --cream: #F4EFE3;
+  --cream-2: #FBF8F1;
+  --ink: #142A31;
+  --muted: #5C6E6A;
+  --green: #2CAE6D;
+  --green-ink: #1E8955;
+  --green-pale: #DCEFE3;
+  --navy: #0E2A38;
+  --navy-2: #0F3B33;
+  --line: #E2DACB;
+  --on-dark: #F2F6F0;
+  --on-dark-muted: rgba(242, 246, 240, 0.68);
+  --shadow-sm: 0 4px 14px rgba(20, 42, 49, 0.08);
+  --shadow-md: 0 16px 40px rgba(20, 42, 49, 0.12);
+  --shadow-lg: 0 28px 70px rgba(14, 42, 56, 0.35);
+  --shadow-green: 0 10px 26px rgba(44, 174, 109, 0.28);
+}
+
+// SCSS variables for the base theme's own mixins ($fontColours, $bgColours, etc.)
+$primary-colour: #2CAE6D;
+$black: #142A31;
+$white: #ffffff;
+
+$buttonColours: (
+  ("primary", #fff, #fff, #2CAE6D, #1E8955),
+  ("navy", #fff, #fff, #0E2A38, #0F3B33)
+);
+
+$fontColours: (
+  primary: $primary-colour,
+  black: $black,
+);
+
+$bgColours: (
+  primary: $primary-colour,
+  black: $black,
+);

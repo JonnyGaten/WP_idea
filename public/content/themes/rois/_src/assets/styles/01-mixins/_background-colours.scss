@@ -1,0 +1,6 @@
+//* Loop for background colours
+@each $name, $value in $bgColours {
+  .bg-#{"" + $name} {
+      background: $value;
+  }
+}

@@ -1,0 +1,54 @@
+nav.top {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: color-mix(in srgb, var(--cream) 90%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+}
+
+nav.top .inner {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 1.15rem;
+}
+
+.mark {
+    width: 26px;
+    height: 26px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3px;
+}
+
+.mark span {
+    border-radius: 3px;
+}
+
+.mark span:nth-child(1), .mark span:nth-child(4) { background: var(--navy); }
+.mark span:nth-child(2), .mark span:nth-child(3) { background: var(--green); }
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 880px) {
+    .nav-links { display: none; }
+}

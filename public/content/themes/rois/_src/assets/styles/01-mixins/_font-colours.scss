@@ -1,0 +1,13 @@
+//* Loop for Font colour
+@each $name, $value in $fontColours {
+  .colour-#{"" + $name} {
+      color: $value;
+  }
+}
+
+//* Loop for fill colour
+@each $name, $value in $fontColours {
+  .fill-colour-#{"" + $name} {
+      fill: $value;
+  }
+}

@@ -1,0 +1,41 @@
+$type-h: 'Sora', -apple-system, sans-serif;
+$type-base: 'Sora', -apple-system, sans-serif;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 800;
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: $type-h;
+    font-weight: $weight-bold;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body, p, ul, li, a {
+    font-family: $type-base;
+    font-weight: $weight-regular;
+}
+
+p {
+    color: var(--muted);
+}

@@ -1,0 +1,34 @@
+.module--feature-cards {
+    padding: 0 0 110px;
+}
+
+.cx-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+@media (max-width: 760px) {
+    .cx-grid { grid-template-columns: 1fr; }
+}
+
+.cx-cell {
+    background: var(--cream-2);
+    padding: 44px 38px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: transform .4s cubic-bezier(.16, 1, .3, 1), box-shadow .4s ease;
+}
+
+.cx-cell:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+.cx-cell svg {
+    margin-bottom: 20px;
+    filter: drop-shadow(0 6px 10px rgba(20, 42, 49, 0.14));
+}
+
+.cx-cell h3 { font-size: 1.3rem; margin-bottom: 10px; }
+.cx-cell p { color: var(--muted); margin: 0; }

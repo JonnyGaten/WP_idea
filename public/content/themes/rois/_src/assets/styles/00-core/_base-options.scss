@@ -1,0 +1,14 @@
+//* All options must be either true or false
+
+//. Debugging
+$use-breakpoint-check: false; // Generate Styles for the Breakpoint Identifier
+$use-html-validator: false; // Turn on the HTML Validator
+
+//. Custom Login
+$use-custom-login-styles: true; // Generate Login Form Styles
+
+//. Fonts
+$use-font-smoothing: true; // Use Font Smoothing
+
+//. Checkboxes and radio
+$use-custom-checkboxes: true; // Custom checkboxes and radio buttons

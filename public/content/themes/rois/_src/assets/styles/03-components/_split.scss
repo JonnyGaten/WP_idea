@@ -1,0 +1,23 @@
+.module--text-and-image {
+    padding: 110px 0;
+}
+
+.module--text-and-image .weave {
+    width: 100%;
+    max-width: 360px;
+}
+
+.module--text-and-image .module__content h2 {
+    font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+    margin-bottom: 16px;
+}
+
+.module--text-and-image .module__content p {
+    font-size: 1.05rem;
+    max-width: 56ch;
+    margin-bottom: 26px;
+}
+
+.module--text-and-image.module--img-right .row {
+    flex-direction: row-reverse;
+}

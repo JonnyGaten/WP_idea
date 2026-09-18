@@ -6,12 +6,14 @@
 !/public/content/themes
 /public/content/themes/*
 !/public/content/themes/base
+!/public/content/themes/rois
 
-# Compiled theme assets — regenerate with `npm run build` inside _src.
+# Compiled theme assets — regenerate with `npm run build` inside each theme's _src.
 # (A real client project deploying straight to WP Engine via git DOES commit
-# _dist/, since there's no build step on the server. This base repo doesn't,
-# to keep the boilerplate diff-clean.)
+# _dist/, since there's no build step on the server. This repo doesn't, to
+# keep diffs clean — bin/setup.sh / bin/seed.sh build it on demand.)
 /public/content/themes/base/_dist/
+/public/content/themes/rois/_dist/
 
 # Node / build tooling
 node_modules/
